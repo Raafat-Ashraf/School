@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using School.Api.Extensions;
-using School.Core.Features.Students.Queries.Models;
+using School.Application.Features.Students.Queries.Models;
 
 namespace School.Api.Controllers;
 

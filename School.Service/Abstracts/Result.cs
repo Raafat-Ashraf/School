@@ -1,4 +1,4 @@
-﻿using School.Data.Abstractions;
+﻿using School.Domain.Abstractions;
 
 namespace School.Service.Abstracts;
 public class Result

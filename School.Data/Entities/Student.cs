@@ -1,5 +1,5 @@
 ﻿
-namespace School.Data.Entities;
+namespace School.Domain.Entities;
 
 public class Student
 {

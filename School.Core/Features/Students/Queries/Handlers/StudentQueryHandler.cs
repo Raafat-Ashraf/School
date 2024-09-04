@@ -1,5 +1,5 @@
 ﻿
-namespace School.Core.Features.Students.Queries.Handlers;
+namespace School.Application.Features.Students.Queries.Handlers;
 
 public class StudentQueryHandler :
     IRequestHandler<GetStudentsQuery, Result<IEnumerable<StudentResponse>>>,

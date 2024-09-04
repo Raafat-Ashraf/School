@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace School.Data.Abstractions.Errors;
+namespace School.Domain.Abstractions.Errors;
 
 public static class StudentErrors
 {

@@ -1,4 +1,4 @@
-﻿namespace School.Data.Contracts.Students;
+﻿namespace School.Domain.Contracts.Students;
 public record StudentResponse(
     int Id,
     string Name,

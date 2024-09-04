@@ -1,5 +1,5 @@
 using School.Api;
-using School.Core;
+using School.Application;
 using School.Infrastructure;
 using School.Service;
 

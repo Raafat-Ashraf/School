@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace School.Core;
+namespace School.Application;
 public static class ConfigureServices
 {
     public static IServiceCollection AddCoreServices(this IServiceCollection services)

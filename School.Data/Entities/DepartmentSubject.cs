@@ -1,4 +1,4 @@
-﻿namespace School.Data.Entities;
+﻿namespace School.Domain.Entities;
 public class DepartmentSubject
 {
     public int DepartmentId { get; set; }

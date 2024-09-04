@@ -1,6 +1,6 @@
 ﻿using Mapster;
 using Microsoft.EntityFrameworkCore;
-using School.Data.Abstractions.Errors;
+using School.Domain.Abstractions.Errors;
 using School.Infrastructure.Persistence.Abstracts;
 using School.Service.Abstracts;
 

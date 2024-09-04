@@ -1,5 +1,5 @@
 ﻿using Mapster;
-using School.Data.Entities;
+using School.Domain.Entities;
 
 namespace School.Service.Mapping;
 internal class MappingConfiguration : IRegister
