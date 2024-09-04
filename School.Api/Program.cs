@@ -1,11 +1,15 @@
 using School.Api;
+using School.Core;
 using School.Infrastructure;
+using School.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services
-    .AddInApiServices(builder.Configuration)
+    .AddApiServices(builder.Configuration)
+    .AddCoreServices()
+    .AddServiceServices()
     .AddInfrastructureServices(builder.Configuration);
 
 

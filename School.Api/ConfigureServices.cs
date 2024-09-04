@@ -2,7 +2,7 @@
 
 public static class ConfigureServices
 {
-    public static IServiceCollection AddInApiServices(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddApiServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddControllers();
 
