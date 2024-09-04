@@ -1,7 +1,6 @@
-﻿
-namespace School.Core.Features.Students.Queries.Models;
+﻿namespace School.Core.Features.Students.Queries.Models;
 
-public class GetStudentsQuery : IRequest<Result<IEnumerable<Student>>>
+public class GetStudentsQuery : IRequest<Result<IEnumerable<StudentResponse>>>
 {
 
 }

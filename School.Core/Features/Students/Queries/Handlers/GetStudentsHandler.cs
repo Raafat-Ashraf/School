@@ -1,7 +1,7 @@
-﻿using School.Core.Features.Students.Queries.Models;
-
+﻿
 namespace School.Core.Features.Students.Queries.Handlers;
-public class GetStudentsHandler : IRequestHandler<GetStudentsQuery, Result<IEnumerable<Student>>>
+
+public class GetStudentsHandler : IRequestHandler<GetStudentsQuery, Result<IEnumerable<StudentResponse>>>
 {
 
     private readonly IStudentService _studentService;
@@ -10,7 +10,7 @@ public class GetStudentsHandler : IRequestHandler<GetStudentsQuery, Result<IEnum
         _studentService = studentService;
     }
 
-    public async Task<Result<IEnumerable<Student>>> Handle(GetStudentsQuery request, CancellationToken cancellationToken)
+    async Task<Result<IEnumerable<StudentResponse>>> IRequestHandler<GetStudentsQuery, Result<IEnumerable<StudentResponse>>>.Handle(GetStudentsQuery request, CancellationToken cancellationToken)
     {
         return await _studentService.GetAllAsync();
     }

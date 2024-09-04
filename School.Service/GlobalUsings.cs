@@ -1,1 +1,1 @@
-﻿
+﻿global using School.Data.Contracts.Students;

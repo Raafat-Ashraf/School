@@ -30,6 +30,7 @@ public static class ConfigureServices
 
     private static IServiceCollection AddDependencies(this IServiceCollection services)
     {
+        services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         services.AddScoped<IStudentRepository, StudentRepository>();
 
 
