@@ -12,9 +12,11 @@ internal class StudentService : IStudentService
     }
 
 
-
-    public async Task<IEnumerable<Student>> GetAllAsync()
+    public async Task<Result<IEnumerable<Student>>> GetAllAsync()
     {
-        return await _studentRepository.GetAllAsync();
+        return Result.Success(await _studentRepository.GetAllAsync());
     }
+
+
+
 }

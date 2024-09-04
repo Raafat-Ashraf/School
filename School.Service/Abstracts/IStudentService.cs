@@ -4,5 +4,5 @@ namespace School.Service.Abstracts;
 
 public interface IStudentService
 {
-    Task<IEnumerable<Student>> GetAllAsync();
+    Task<Result<IEnumerable<Student>>> GetAllAsync();
 }

@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using School.Api.Extensions;
 using School.Core.Features.Students.Queries.Models;
 
 namespace School.Api.Controllers;
@@ -21,6 +22,6 @@ public class StudentsController : ControllerBase
     {
         var result = await _mediator.Send(new GetStudentsQuery());
 
-        return Ok(result);
+        return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
     }
 }
