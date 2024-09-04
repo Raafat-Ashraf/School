@@ -1,4 +1,6 @@
-﻿namespace School.Service.Abstracts;
+﻿using School.Data.Abstractions;
+
+namespace School.Service.Abstracts;
 public class Result
 {
     public Result(bool isSuccess, Error error)

@@ -24,4 +24,13 @@ public class StudentsController : ControllerBase
 
         return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
     }
+
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> Get(int id)
+    {
+        var result = await _mediator.Send(new GetStudentByIdQuery(id));
+
+        return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
+    }
 }

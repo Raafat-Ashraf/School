@@ -1,4 +1,6 @@
 ﻿using Mapster;
+using Microsoft.EntityFrameworkCore;
+using School.Data.Abstractions.Errors;
 using School.Infrastructure.Persistence.Abstracts;
 using School.Service.Abstracts;
 
@@ -11,7 +13,6 @@ internal class StudentService : IStudentService
         _studentRepository = studentRepository;
     }
 
-
     public async Task<Result<IEnumerable<StudentResponse>>> GetAllAsync()
     {
         var students = await _studentRepository.GetAllAsync();
@@ -19,4 +20,13 @@ internal class StudentService : IStudentService
         return Result.Success(students.Adapt<IEnumerable<StudentResponse>>());
     }
 
+    public async Task<Result<StudentResponse>> GetByIdAsync(int id)
+    {
+        var student = await _studentRepository.FindAsync(x => x.Id == id, x => x.Include(x => x.Department));
+        if (student is null)
+            return Result.Failure<StudentResponse>(StudentErrors.StudentNotFound);
+
+
+        return Result.Success(student.Adapt<StudentResponse>());
+    }
 }
